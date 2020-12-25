@@ -25,7 +25,7 @@
                 <!-- Mail -->
                 <div class="form-group col-md-12">
                     <label for="title"> Email </label>
-                    <input type="text" id="email" v-model="mail" name="title" class="form-control" placeholder="Ingresa email">
+                    <input type="text" id="mail" v-model="mail" name="title" class="form-control" placeholder="Ingresa email">
                 </div>
 
                 <!-- Teléfono -->
