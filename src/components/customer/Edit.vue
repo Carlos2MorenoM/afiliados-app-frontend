@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="form-group col-md-4 pull-right">
-                    <button class="btn- btn-success" type="submit"> Editar Afiliado </button>
+                    <button class="btn btn-success" type="submit"> Editar Afiliado </button>
                 </div>      </form>
         </div>
     </div>   
@@ -69,10 +69,11 @@ export default {
     methods: {
         editCustomer() {
             let customerData = {
-                DNI: this.customer.dni,
-                nombre: this.customer.name,
-                apellidos: this.customer.last_name,
-                mail: this.customer.mail
+                DNI: this.customer.DNI,
+                nombre: this.customer.nombre,
+                apellidos: this.customer.apellidos,
+                mail: this.customer.mail,
+                telefono: this.customer.telefono
             };
 
             axios
@@ -81,10 +82,12 @@ export default {
                     `${server.baseURL}/customer/update?customerID=${this.id}`,
                     customerData
                 )
-
+                /* exported variableName */
                 .then(data => {
+
                     router.push({name: "home"});
                 });
+                
         },
 
         getCustomer() {

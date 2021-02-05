@@ -72,6 +72,7 @@ export default {
         },
         //AXIOS para mandar los datos de customerData al servidor.
         __submitToServer(data){
+            /* exported variableName */
             axios.post(`${server.baseURL}/customer/create`, data).then(data => {
                 router.push({ name: "home"});
             })
